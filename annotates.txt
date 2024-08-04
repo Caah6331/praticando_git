@@ -17,11 +17,48 @@ Abrir:
 
 >   git init
 
+
 >   git status
         # Se aparecer a mensagem 'fatal: not a git repository (or any of the parent directories): .git', isso significa que o diretório atual não é um repositório Git, então executar o comando 'git init'
+        # Este comando exibe todas as alterações realizadas no projeto
+
 
 >   git add .
         # Adiciona TODOS os arquivos do repositório
         # Caso queira acrescentar apenas um arquivo, executar o comando 'git add nome_arquivo'
 
-> git commit -m "projeto inicial"
+
+>   git commit -m "primeiro commit mensagem"
+        # Caso o Author seja desconhecido, o e-mail deverá ser configurado, executar:
+    >   git config --global user.email "seu_email@email.com"
+    >   git config --global user.name "seu_nome"
+
+
+>   git branch -M main
+
+
+>   git remote add origin git@github.com:Caah6331/praticando_git.git
+        # o protocolo padrão do Git vem em 'https' mas é recomendado fazer a integração pelo SSH, como no ex acima. Este comando é apenas para linkar o repositório. OBS: Caso apareça a mensagem 'This key is not known by any other names.' Seguir o passo a passo de configuração da chave SSH
+
+>   git push -u origin main
+
+
+>   git clone 'url do repositorio'
+        comando para clonar qualquer repositorio publico no Github e colaborar com o projeto
+        rodar o comando pelo VS Code já dentro da pasta que deseja
+
+
+# Configuração da chave SSH
+    Na plataforma do Github:
+        Clicar no 'Perfil'
+        Clicar em 'Settings'
+        'New SSH Key'
+        Inputar o nome do dispositivo 'Title' e o chave 'Key' que precisa ser gerada:
+            >   ssh-keygen -t ed25519 -C "seu_email@email.com"  
+                #executar na linha de comando do VS Code
+            Confirmar com Enter
+        A chave foi gerada e salva numa pasta com nome '.ssh' que normalmente fica na raiz ou pasta do usuario
+        Abrir o arquivo .pub como txt e copiar a chave
+        Após feito essa validação, executar o '> git push' acima
+
+
