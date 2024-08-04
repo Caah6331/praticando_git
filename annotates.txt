@@ -1,0 +1,27 @@
+# Configurar o Github no Windows pela 1a vez
+
+Abrir:
+    Windows Search
+    Digitar 'variaveis'
+    Clicar em 'Editar as variaveis no ambiente do Sistema'
+    'Variaveis de ambiente'
+    Encontrar e abrir a variável 'Path' no botão 'Editar'
+    Conferir se o Git já está no diretório do windows 'C:\Users\carolina.amorim\Git\cmd
+    Se já estiver, reiniciar o VS Code, se não, mover o Git para este caminho
+
+
+### COMANDOS GIT ###
+
+# Iniciando o Git: 
+    transformando o repositório em um repositório Git. Executar apenas uma vez no início do projeto
+
+>   git init
+
+>   git status
+        # Se aparecer a mensagem 'fatal: not a git repository (or any of the parent directories): .git', isso significa que o diretório atual não é um repositório Git, então executar o comando 'git init'
+
+>   git add .
+        # Adiciona TODOS os arquivos do repositório
+        # Caso queira acrescentar apenas um arquivo, executar o comando 'git add nome_arquivo'
+
+> git commit -m "projeto inicial"
